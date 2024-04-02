@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import NavBar from '../../Countries-APP/components/NavBar'
-import Footer from '../../Countries-APP/components/Footer'
+// import Footer from '../../Countries-APP/components/Footer'
 
 const OtherLayouts = ({children}) => {
   const [countries, setCountries] = useState([]);

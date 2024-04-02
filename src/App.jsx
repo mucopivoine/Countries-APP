@@ -6,7 +6,7 @@ import NotFound from '../pages/NotFound';
 import HomeLayout from '../layouts/HomeLayout';
 import OtherLayouts from '../layouts/OtherLayouts';
 import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import Pagination from '../components/Pagination';
 // import Pagination from './components/Pagination';
 // import Footer from './components/Footer';
@@ -41,10 +41,6 @@ const App = () => {
         <Route path="*" element={
           <Pagination />
 
-        }
-        />
-         <Route path="*" element={
-          <Footer />
         }
         />
       </Routes>

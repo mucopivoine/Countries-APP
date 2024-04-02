@@ -5,7 +5,7 @@ function Countries() {
 
    const[countryData, setCountryData] =  useState([]);
    const [currentPage, setCurrentPage] = useState(1);
-   const countriesPerPage = 50;
+   const countriesPerPage = 15;
    useEffect(() =>{
     fetch('https://restcountries.com/v3/all')
     .then(response => response.json())
@@ -24,7 +24,7 @@ function Countries() {
   return (
       <div>
       <div>
-      <div className="flex justify-between ">
+      <div className=" flex justify-between ">
     <h1 className="text-2xl px-10 py-5">View Countries</h1>
     
     <input type="text" name="search" placeholder="Search continent" className="color-black  mt-5 mr-10" list="options"/>
@@ -40,7 +40,7 @@ function Countries() {
     </div>
    <p className="px-10 py-5 mb-10 text-xl ">Pages</p>
       
-    <div className="container items-center justify-center place-items-center md:ml-0 lg:ml-20">
+    <div className="container items-center justify-center place-items-center md:ml-0 lg:ml-20 ">
       
       <div className="">
         <ul className="flex flex-wrap gap-5 justify-center h-[120px] mx-auto pl-10 place-items-center"> 
@@ -59,8 +59,9 @@ function Countries() {
     </div>
   </div>
        {/* Pagination */}
+       
        {countryData.length > 0 && (
-        <div className="flex justify-center my-5">
+        <div className="flex justify-center my-5 mt-96 pt-60">
           <ul className="flex">
             <li className="mx-2 cursor-pointer" onClick={() =>paginate(currentPage - 1)} disabled={currentPage=== 1}>&lt;</li>
             {Array.from({ length: Math.ceil(countryData.length / countriesPerPage) }, (_, index) => (
