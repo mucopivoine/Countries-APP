@@ -4,8 +4,8 @@ import React, {useState, useEffect} from 'react'
 function Countries() {
 
    const[countryData, setCountryData] =  useState([]);
-   const [currentPage, setCurrentPage] = useState(1);
-   const countriesPerPage = 15;
+  //  const [currentPage, setCurrentPage] = useState(1);
+  //  const countriesPerPage = 15;
    useEffect(() =>{
     fetch('https://restcountries.com/v3/all')
     .then(response => response.json())
@@ -13,12 +13,6 @@ function Countries() {
    
    
    }, []);
-   const indexOfLastCountry = currentPage * countriesPerPage;
-   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
-   const currentCountries = countryData.slice(indexOfFirstCountry, indexOfLastCountry);
- 
-   // Change page
-   const paginate = (pageNumber) => setCurrentPage(pageNumber);
  
   
   return (
@@ -58,22 +52,7 @@ function Countries() {
       </div>
     </div>
   </div>
-       {/* Pagination */}
-       
-       {countryData.length > 0 && (
-        <div className="flex justify-center my-5 mt-96 pt-60">
-          <ul className="flex">
-            <li className="mx-2 cursor-pointer" onClick={() =>paginate(currentPage - 1)} disabled={currentPage=== 1}>&lt;</li>
-            {Array.from({ length: Math.ceil(countryData.length / countriesPerPage) }, (_, index) => (
-              <li key={index + 1} className="mx-2 cursor-pointer" onClick={() => paginate(index + 1)}>
-                {index + 1}
-                
-              </li>
-            ))}
-             <li className="mx-2 cursor-pointer" onClick={() =>paginate(currentPage - 1)} disabled={currentPage=== 1}>&gt;</li>
-          </ul>
-        </div>
-      )}
+      
     </div>
   );
 }

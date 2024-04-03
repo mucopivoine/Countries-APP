@@ -32,11 +32,11 @@
 import React from 'react'
 
 function Pagination() {
-  const indexOfLastCountry = currentPage * countriesPerPage;
-   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
-  const[countryData, setCountryData] =  useState([]);
-  const currentCountries = countryData.slice(indexOfFirstCountry, indexOfLastCountry);
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  // const indexOfLastCountry = currentPage * countriesPerPage;
+  //  const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
+  // const[countryData, setCountryData] =  useState([]);
+  // const currentCountries = countryData.slice(indexOfFirstCountry, indexOfLastCountry);
+  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
  
   
   return (
