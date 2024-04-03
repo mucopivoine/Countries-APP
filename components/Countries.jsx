@@ -40,9 +40,9 @@ function Countries() {
     </div>
    <p className=" text-xl px-10 pb-10">Pages<span> 1 of 5</span> </p>
       
-    <div className="">
+    <div className="max-w-[90%] justify-items-center ml-10">
       
-        <ul className="  flex flex-wrap gap-5 justify-center items-center"> 
+        <ul className=" md:ml-5 ml-10 flex flex-wrap gap-5 justify-center items-center"> 
           {/* Render countries based on current page */}
           {currentCountries.map(country => (
             <div className=" container md:w-2/12 lg:w-2/12  justify-center" key={country.name.common}>
