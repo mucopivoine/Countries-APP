@@ -5,7 +5,7 @@ function Countries() {
 
    const[countryData, setCountryData] =  useState([]);
    const [currentPage, setCurrentPage] = useState(1);
-   const countriesPerPage = 250;
+   const countriesPerPage = 50;
    useEffect(() =>{
     fetch('https://restcountries.com/v3/all')
     .then(response => response.json())
@@ -57,10 +57,23 @@ function Countries() {
      
     </div>
   </div>
-      
+       {/* {Pagination */}
+       
+       {countryData.length > 0 && (
+        <div className="flex justify-center my-5  pt-6">
+          <ul className="flex">
+            <li className="mx-2 cursor-pointer border-2 p-1 " onClick={() =>paginate(currentPage - 1)}>&lt;</li>
+            {Array.from({ length: Math.ceil(countryData.length / countriesPerPage) }, (_, index) => (
+              <li key={index + 1} className="mx-1 cursor-pointer border-2 p-2" onClick={() => paginate(index + 1)}>
+                {index + 1}
+                
+              </li>
+            ))}
+             <li className="mx-2 cursor-pointer border-2 p-2" onClick={() =>paginate(currentPage - 1)}>&gt;</li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
-      
-
 export default Countries;
