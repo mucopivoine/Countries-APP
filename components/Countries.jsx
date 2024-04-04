@@ -57,22 +57,7 @@ function Countries() {
      
     </div>
   </div>
-       {/* Pagination
-       
-       {countryData.length > 0 && (
-        <div className="flex justify-center my-5 mt-96 pt-60">
-          <ul className="flex">
-            <li className="mx-2 cursor-pointer" onClick={() =>paginate(currentPage - 1)} disabled={currentPage=== 1}>&lt;</li>
-            {Array.from({ length: Math.ceil(countryData.length / countriesPerPage) }, (_, index) => (
-              <li key={index + 1} className="mx-2 cursor-pointer" onClick={() => paginate(index + 1)}>
-                {index + 1}
-                
-              </li>
-            ))}
-             <li className="mx-2 cursor-pointer" onClick={() =>paginate(currentPage - 1)} disabled={currentPage=== 1}>&gt;</li>
-          </ul>
-        </div>
-      )} */}
+      
     </div>
   );
 }
