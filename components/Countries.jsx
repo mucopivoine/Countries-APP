@@ -38,7 +38,7 @@ function Countries() {
             <option value="Oceania"></option>
           </datalist>
     </div>
-   <p className=" text-xl px-10 pb-10">Pages<span> 1 of 5</span> </p>
+   <p className=" text-xl px-10 pb-10">Pages {currentPage} of 5 </p>
       
     <div className="max-w-[90%] justify-items-center ml-10">
       
@@ -60,8 +60,8 @@ function Countries() {
        {/* {Pagination */}
        
        {countryData.length > 0 && (
-        <div className="flex justify-center my-5  pt-6">
-          <ul className="flex">
+        <div className="flex justify-center my-5  pt-6 ">
+          <ul className="flex ">
             <li className="mx-2 cursor-pointer border-2 p-1 " onClick={() =>paginate(currentPage - 1)}>&lt;</li>
             {Array.from({ length: Math.ceil(countryData.length / countriesPerPage) }, (_, index) => (
               <li key={index + 1} className="mx-1 cursor-pointer border-2 p-2" onClick={() => paginate(index + 1)}>

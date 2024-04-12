@@ -8,8 +8,8 @@ import { CiMenuFries } from "react-icons/ci";
 
 const Header = () => {
   return (
-    <section className="md:w-full sm:w-full m-auto p-10 bg-[url('/earthimage.webp')]">
-      <div className="text-center justify-center">
+    <section className="lg:w-full mx-auto p-10 bg-[url('/earthimage.webp')]">
+      <div className="text-center justify-center ">
       
        <ul className="flex items-center justify-between">
       <li><a href="https://logoipsum.svg" className="text-blue-500 lg:block hidden ">
