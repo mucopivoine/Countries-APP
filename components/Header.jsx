@@ -16,7 +16,7 @@ const Header = () => {
         <img  className="" src={logoipsum}></img></a></li>
         <li><Mobilelogo/></li>
       <li className="text-white hidden lg:block " id="menu"><a href="/">Countries</a></li>
-   <li className="text-white lg:hidden md:block"><CiMenuFries /></li>
+   <li className="text-white lg:hidden md:block cursor-pointer"><CiMenuFries /></li>
                     
     </ul>
     
